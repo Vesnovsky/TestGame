@@ -10,24 +10,32 @@
 class Game
 {
 public:
-	Game();
+	static Game& getInstance();
 	void run();
+
 private:
+	Game();
+
 	sf::RenderWindow window;
+	sf::Clock eps;
 
 	unsigned short quantityPoints = 0;
+	bool playing = false;
+
 	sf::Font font;
-	sf::Text txtScore, txtPoints;
+	sf::Text txtPoints;
+	sf::Text txtScore;
 	sf::Texture btnTexture;
 
-	Button btnStart;
-	Button btnStop;
-
-	std::vector<Point> pointArray;
-	sf::Clock eps;
 	sf::VertexArray playingField;
 
-	bool playing = false;
+	Button btnStart, btnStop;
+
+	std::vector<Point> pointArray;
+	
+	
+
+	
 };
 #endif#
 
