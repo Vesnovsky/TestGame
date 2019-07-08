@@ -150,14 +150,6 @@
     <ClInclude Include="Game.h" />
     <ClInclude Include="Point.h" />
   </ItemGroup>
-  <ItemGroup>
-    <Image Include="point.png" />
-    <Image Include="start.png" />
-    <Image Include="stop.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Font Include="..\..\..\Downloads\font.ttf" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

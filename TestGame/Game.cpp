@@ -9,12 +9,12 @@ Game& Game::getInstance()
 
 Game::Game()
 	:window(sf::VideoMode(1000, 700), "CoolGame", sf::Style::Default),
-	btnStart(sf::Vector2f(300.f, 550.f), "start.png"),
-	btnStop(sf::Vector2f(600.f, 550.f), "stop.png")
+	btnStart(sf::Vector2f(300.f, 550.f), "res/start.png"),
+	btnStop(sf::Vector2f(600.f, 550.f), "res/stop.png")
 {
 	window.setFramerateLimit(60);
 	srand(time(NULL));
-	if (!font.loadFromFile("font.ttf"))
+	if (!font.loadFromFile("res/font.ttf"))
 		// error...
 
 	playingField.setPrimitiveType(sf::Quads);
@@ -83,7 +83,7 @@ void Game::run()
 				eps.restart();
 				Point point(sf::Vector2f(64 + rand() % 946, -64),
 					(sf::Color((1 + rand() % 255), (1 + rand() % 255), (1 + rand() % 255), 255)),
-					sf::Vector2f(0, (0.5f + rand() % 3)),std::string("Point.png"));
+					sf::Vector2f(0, (0.5f + rand() % 3)),std::string("res/Point.png"));
 				pointArray.push_back(point);
 			}
 		}else { 

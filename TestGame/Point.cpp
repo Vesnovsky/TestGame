@@ -6,7 +6,7 @@
 Point::Point(const sf::Vector2f& pntPosition, const sf::Color& pntColor,const sf::Vector2f& pntSpeed, const std::string& nameOfFile)
 {
 	this->pntSpeed = pntSpeed;
-	pntTexture.loadFromFile("Point.png");
+	pntTexture.loadFromFile(nameOfFile);
 	square.setTexture(pntTexture);
 	square.setPosition(pntPosition);
 	square.setColor(pntColor);
